@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+        <title>response.xhtml</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="bootstrap.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h2>Result Page</h2><hr/>
+        <h:outputText value="Your name is: #{user.name}"/><br/>
+        <h:outputText value="Your email is: #{user.email}"/><br/>
+        <h:outputText value="Your password is: #{user.password}"/><br/>
+        <h:outputText value="Your gender is: #{user.gender}"/><br/>
+        <h:outputText value="Your address is: #{user.address}"/><br/>
+        <a href="index.xhtml"><button type="button">Go Back</button></a>
+    </body>
+</html>
