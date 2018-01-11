@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>index.xhtml</title>
+    </h:head>
+    <h:body>
+        <h2>Input Form</h2>
+
+        <f:view>
+            <h:form id="form">
+                First Name:<br/>
+                <h:inputText value="#{user.fname}"/><br/>
+                Last Name:<br/>
+                <h:inputText value="#{user.lname}"/><br/>
+                Gender:<br/>
+                <h:selectOneRadio value="#{user.gender}">
+                    <f:selectItem itemLabel="Male" itemValue="Male"/>
+                    <f:selectItem itemLabel="Female" itemValue="Female"/>
+                </h:selectOneRadio>
+                Address:<br/>
+                <h:inputTextarea value="#{user.address}"/><br/>
+                <h:commandButton action="response.xhtml" value="Submit"/>
+            </h:form>
+        </f:view>
+    </h:body>
+</html>
+

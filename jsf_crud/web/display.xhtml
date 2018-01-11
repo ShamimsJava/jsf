@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>display.xhtml</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h2>ALL USERS INFORMATION</h2>
+        <h:form>
+            <h:commandButton action="insert.xhtml" value="Add New User"/>
+        </h:form><hr/>
+        <f:view>
+            <h:form>
+                <h:dataTable value="#{user.allRecords}" var="u" border="1" width="70%">
+                    <h:column>
+                        <f:facet name="header">ID</f:facet>
+                        <h:outputText value="#{u.getId()}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">First Name</f:facet>
+                        <h:outputText value="#{u.getFname()}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Last Name</f:facet>
+                        <h:outputText value="#{u.getLname()}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Username</f:facet>
+                        <h:outputText value="#{u.getUsername()}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Password</f:facet>
+                        <h:outputText value="#{u.getPassword()}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Update</f:facet>
+                        <h:commandButton action="#{user.getRecordById(u.id)}" value="Update"/>
+
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Delete</f:facet>
+                        <h:commandButton action="#{user.delete(u.id)}" value="Delete"/>
+                    </h:column>
+                </h:dataTable>
+            </h:form>
+        </f:view>
+    </body>
+</html>

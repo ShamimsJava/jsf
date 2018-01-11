@@ -6,7 +6,7 @@ import javax.faces.bean.RequestScoped;
 @ManagedBean
 @RequestScoped
 public class User {
-
+ 
     private String name;
     private String email;
     private String password;
